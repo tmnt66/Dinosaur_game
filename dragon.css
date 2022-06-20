@@ -1,0 +1,94 @@
+* {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    background: center/cover no-repeat url('bg.png');
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+}
+
+.gameover {
+    display: flex;
+    /* display: none; */
+    visibility: hidden;
+    height: 100vh;
+    width: 100vw;
+    background-color: transparent;
+    position: absolute;
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+}
+
+.score {
+    display: flex;
+    /* border: 2px solid red; */
+    height: 5vh;
+    width: 20vw;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: larger;
+}
+
+.score h4 {
+    text-align: initial;
+}
+
+.dino {
+    background: center/contain no-repeat url('dino.png');
+    height: 19vh;
+    width: 19vh;
+    bottom: 5px;
+    /* border: 2px solid red; */
+    position: absolute;
+    z-index: 99;
+    left: 50px;
+}
+.animatedino{
+    animation: anim-dino 1.2s linear infinite;
+}
+
+.bowser {
+    background: center/contain no-repeat url('dragon.png');
+    height: 19vh;
+    width: 19vh;
+    position: absolute;
+    /* border: 2px solid blue; */
+    z-index: 99;
+    bottom: 5px;
+    left: 85vw;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+.bowser-anim{
+    animation: anim-bowser 2s linear infinite;
+}
+
+@keyframes anim-bowser {
+    0% {
+        left: 90vw;
+    }
+    100% {
+        left: 0vw;
+    }
+}
+
+@keyframes anim-dino {
+    0% {
+        bottom: 0vw;
+    }
+
+    50% {
+        bottom: 30vw;
+    }
+
+    100% {
+        bottom: 0vw;
+    }
+}
